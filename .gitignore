@@ -1,0 +1,32 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Chroma vector DB (large binary, rebuilt via ingest)
+db/chroma/
+
+# SQLite eval log (local state)
+db/eval.db
+
+# Downloaded docs corpus
+data/docs/
+_tmp_lc/
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp

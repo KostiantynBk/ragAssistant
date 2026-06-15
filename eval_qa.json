@@ -1,0 +1,142 @@
+[
+  {
+    "question": "What is LangChain and what problem does it solve?",
+    "ground_truth_doc_id": "index.md",
+    "acceptable_answers": [
+      "LangChain is a framework for building applications powered by large language models."
+    ]
+  },
+  {
+    "question": "How do I install LangChain?",
+    "ground_truth_doc_id": "get_started/installation.md",
+    "acceptable_answers": [
+      "You can install LangChain via pip: pip install langchain"
+    ]
+  },
+  {
+    "question": "What is a LangChain Chain and how does it differ from a standalone LLM call?",
+    "ground_truth_doc_id": "modules/chains/index.md",
+    "acceptable_answers": [
+      "A Chain sequences multiple components together, allowing complex multi-step workflows."
+    ]
+  },
+  {
+    "question": "How does LangChain implement memory in conversational applications?",
+    "ground_truth_doc_id": "modules/memory/index.md",
+    "acceptable_answers": [
+      "LangChain provides memory classes like ConversationBufferMemory to persist conversation history."
+    ]
+  },
+  {
+    "question": "What is the difference between a Tool and an Agent in LangChain?",
+    "ground_truth_doc_id": "modules/agents/index.md",
+    "acceptable_answers": [
+      "A Tool is a function the agent can call; an Agent is the LLM-driven loop that selects which tools to use."
+    ]
+  },
+  {
+    "question": "How do I create a custom LangChain Tool?",
+    "ground_truth_doc_id": "modules/agents/tools/custom_tools.md",
+    "acceptable_answers": [
+      "You can create a custom tool by subclassing BaseTool or using the @tool decorator."
+    ]
+  },
+  {
+    "question": "What vectorstores does LangChain support out of the box?",
+    "ground_truth_doc_id": "modules/data_connection/vectorstores/index.md",
+    "acceptable_answers": [
+      "LangChain supports Chroma, FAISS, Pinecone, Qdrant, Weaviate, and many others."
+    ]
+  },
+  {
+    "question": "How does the RetrievalQA chain work?",
+    "ground_truth_doc_id": "modules/chains/document/retrieval_qa.md",
+    "acceptable_answers": [
+      "RetrievalQA retrieves relevant documents and passes them as context to the LLM to answer the question."
+    ]
+  },
+  {
+    "question": "What is a PromptTemplate in LangChain?",
+    "ground_truth_doc_id": "modules/model_io/prompts/prompt_templates/index.md",
+    "acceptable_answers": [
+      "A PromptTemplate is a reusable string template with named placeholders that are filled at runtime."
+    ]
+  },
+  {
+    "question": "How do I stream responses from a LangChain LLM?",
+    "ground_truth_doc_id": "modules/model_io/llms/streaming.md",
+    "acceptable_answers": [
+      "Pass streaming=True to the LLM constructor and use a StreamingStdOutCallbackHandler."
+    ]
+  },
+  {
+    "question": "What is LangSmith and how does it relate to LangChain?",
+    "ground_truth_doc_id": "langsmith/index.md",
+    "acceptable_answers": [
+      "LangSmith is a platform for debugging, testing, and monitoring LangChain applications."
+    ]
+  },
+  {
+    "question": "How do I load a PDF document in LangChain?",
+    "ground_truth_doc_id": "modules/data_connection/document_loaders/pdf.md",
+    "acceptable_answers": [
+      "Use PyPDFLoader or PDFMinerLoader from langchain_community.document_loaders."
+    ]
+  },
+  {
+    "question": "What text splitters does LangChain provide?",
+    "ground_truth_doc_id": "modules/data_connection/document_transformers/index.md",
+    "acceptable_answers": [
+      "LangChain provides RecursiveCharacterTextSplitter, CharacterTextSplitter, MarkdownHeaderTextSplitter, and others."
+    ]
+  },
+  {
+    "question": "How do I use OpenAI function calling with LangChain?",
+    "ground_truth_doc_id": "modules/model_io/chat/function_calling.md",
+    "acceptable_answers": [
+      "Bind functions to the chat model using model.bind_tools() or create_openai_fn_chain."
+    ]
+  },
+  {
+    "question": "What is LCEL (LangChain Expression Language)?",
+    "ground_truth_doc_id": "expression_language/index.md",
+    "acceptable_answers": [
+      "LCEL is a declarative syntax using the | pipe operator to compose chains from runnables."
+    ]
+  },
+  {
+    "question": "How do I add a callback handler to trace LangChain runs?",
+    "ground_truth_doc_id": "modules/callbacks/index.md",
+    "acceptable_answers": [
+      "Pass callbacks=[MyHandler()] to the chain, LLM, or tool constructor."
+    ]
+  },
+  {
+    "question": "What is the difference between HumanMessage, AIMessage, and SystemMessage?",
+    "ground_truth_doc_id": "modules/model_io/chat/index.md",
+    "acceptable_answers": [
+      "HumanMessage is user input, AIMessage is the model response, SystemMessage sets the assistant persona."
+    ]
+  },
+  {
+    "question": "How does LangChain handle rate limits and retries?",
+    "ground_truth_doc_id": "modules/model_io/llms/llm_caching.md",
+    "acceptable_answers": [
+      "LangChain can cache LLM responses and automatically retry on rate-limit errors with tenacity."
+    ]
+  },
+  {
+    "question": "What is a DocumentTransformer in LangChain?",
+    "ground_truth_doc_id": "modules/data_connection/document_transformers/index.md",
+    "acceptable_answers": [
+      "A DocumentTransformer modifies a list of Documents, e.g., splitting, filtering, or translating them."
+    ]
+  },
+  {
+    "question": "How do I use LangChain with a local LLM via Ollama?",
+    "ground_truth_doc_id": "integrations/llms/ollama.md",
+    "acceptable_answers": [
+      "Use the Ollama class from langchain_community.llms with the model name as parameter."
+    ]
+  }
+]
