@@ -1,3 +1,10 @@
+"""
+Document loading step in the ingestion phase.
+
+Called by scripts/ingest.py. It finds Markdown files under data/docs and returns
+their path/text pairs; the next step is src.ingest.chunker.
+"""
+
 from pathlib import Path
 
 

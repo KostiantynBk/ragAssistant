@@ -44,6 +44,46 @@ python scripts/ingest.py
 uvicorn src.api.main:app --reload
 ```
 
+> Note: the LangChain repository layout may change. If `_tmp_lc\docs\docs` does not exist on Windows,
+> copy the available Markdown files instead:
+>
+> ```powershell
+> git clone --depth 1 https://github.com/langchain-ai/langchain.git tmp_lc
+> xcopy tmp_lc\*.md data\docs /S /I /Y
+> python scripts/ingest.py
+> ```
+
+On PowerShell, keep the API server running in one terminal:
+
+```powershell
+uvicorn src.api.main:app --reload
+```
+
+Then open a second PowerShell terminal and call the API with `Invoke-RestMethod`:
+
+```powershell
+$response = Invoke-RestMethod `
+  -Uri "http://localhost:8000/ask" `
+  -Method Post `
+  -ContentType "application/json" `
+  -Body (@{
+    question = "What is LangChain?"
+    chunking = "header_aware"
+    use_reranker = $true
+    top_k = 5
+  } | ConvertTo-Json)
+```
+
+Inspect the response:
+
+```powershell
+$response.answer
+$response.grounded
+$response.latency_ms
+$response.sources | Format-List
+$response | ConvertTo-Json -Depth 10
+```
+
 Then query it:
 
 ```bash

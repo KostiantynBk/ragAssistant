@@ -1,5 +1,8 @@
 """
-Benchmark all 4 configs and write results to SQLite + print a markdown table for the README.
+Evaluation entry point for persisted benchmark results.
+
+Run this after ingestion when you want metrics saved. It calls src.eval.harness,
+then passes each result to src.eval.logger so /eval/latest can read it later.
 
 Usage:
     python scripts/compare_configs.py [--qa-path eval_qa.json]

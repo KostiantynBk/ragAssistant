@@ -1,3 +1,10 @@
+"""
+Tests for the query retrieval and reranking steps.
+
+These verify src.retrieval.retriever and src.retrieval.reranker before their
+results move on to src.generation.generator.
+"""
+
 from unittest.mock import MagicMock, patch
 
 import pytest

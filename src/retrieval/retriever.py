@@ -1,3 +1,10 @@
+"""
+Vector retrieval step in the query phase.
+
+Called by src.api.main or src.agent.loop. It embeds the user question, searches
+the selected Chroma collection, and returns Source objects for optional reranking.
+"""
+
 import os
 
 import chromadb

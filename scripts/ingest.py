@@ -1,5 +1,9 @@
 """
-Ingest LangChain docs into two Chroma collections (recursive + header-aware).
+Ingestion entry point.
+
+Run this before the API. It loads Markdown docs from data/docs, sends them to
+src.ingest.loader, src.ingest.chunker, and src.ingest.embedder, then writes the
+finished vector collections into db/chroma for the query phase.
 
 Usage:
     python scripts/ingest.py [--docs-dir data/docs] [--db-path db/chroma]

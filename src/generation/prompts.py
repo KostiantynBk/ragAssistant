@@ -1,3 +1,10 @@
+"""
+Prompt definitions used during the query phase.
+
+src.generation.generator uses SYSTEM_PROMPT to answer from retrieved context.
+src.eval.judge uses JUDGE_PROMPT afterward to score whether that answer is grounded.
+"""
+
 SYSTEM_PROMPT = """\
 You are a technical documentation assistant. Answer the user's question using ONLY the provided context chunks.
 Rules:

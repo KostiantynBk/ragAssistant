@@ -1,3 +1,10 @@
+"""
+Tests for the FastAPI query entry point.
+
+These mock retrieval, reranking, and generation so src.api.main can be checked
+without calling OpenAI or Chroma.
+"""
+
 from unittest.mock import patch
 
 import pytest

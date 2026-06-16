@@ -1,4 +1,10 @@
-"""OpenAI tool-calling agent loop. The LLM can call retrieve_docs as a tool."""
+"""
+Optional agent-mode query path.
+
+This is separate from the main FastAPI /ask flow. It lets the LLM call a
+retrieve_docs tool, then uses retrieval/reranking and the judge before returning
+the same RAGAnswer shape.
+"""
 
 import json
 import os

@@ -1,3 +1,10 @@
+"""
+Shared API data contracts.
+
+Used by src.api.main to validate incoming requests and shape outgoing responses.
+The same Source and RAGAnswer models are passed through retrieval and generation.
+"""
+
 from typing import Literal
 
 from pydantic import BaseModel, Field

@@ -1,3 +1,10 @@
+"""
+SQLite logging for query and evaluation results.
+
+Called after generation to record /ask responses, and by scripts/compare_configs.py
+to store benchmark metrics. src.api.main reads the latest eval rows for /eval/latest.
+"""
+
 import os
 import sqlite3
 from contextlib import contextmanager

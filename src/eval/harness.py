@@ -1,5 +1,9 @@
 """
-Evaluation harness: hit@k and MRR over a QA set.
+Evaluation harness for retrieval quality.
+
+Called by scripts/evaluate.py and scripts/compare_configs.py. It runs questions
+from eval_qa.json through retrieval/reranking, computes metrics, and returns the
+result for printing or SQLite logging.
 
 QA format (eval_qa.json):
 [

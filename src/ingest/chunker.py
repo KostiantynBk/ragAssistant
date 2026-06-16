@@ -1,3 +1,10 @@
+"""
+Document chunking step in the ingestion phase.
+
+Called by scripts/ingest.py after src.ingest.loader. It creates recursive and
+header-aware chunk lists; the next step is src.ingest.embedder.
+"""
+
 from langchain_text_splitters import (
     MarkdownHeaderTextSplitter,
     RecursiveCharacterTextSplitter,

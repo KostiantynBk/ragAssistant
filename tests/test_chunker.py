@@ -1,3 +1,10 @@
+"""
+Tests for the ingestion chunking step.
+
+These verify src.ingest.chunker before chunks move on to src.ingest.embedder
+during ingestion.
+"""
+
 from src.ingest.chunker import header_aware_chunks, recursive_chunks
 
 SAMPLE_MD = """# Introduction

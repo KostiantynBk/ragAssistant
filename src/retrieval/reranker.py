@@ -1,3 +1,11 @@
+"""
+Optional reranking step in the query phase.
+
+Called after src.retrieval.retriever when use_reranker is true. It scores each
+question/chunk pair with a cross-encoder, then returns the strongest chunks to
+src.generation.generator.
+"""
+
 from __future__ import annotations
 
 from sentence_transformers import CrossEncoder

@@ -1,3 +1,10 @@
+"""
+Embedding and vector-store write step in the ingestion phase.
+
+Called by scripts/ingest.py after src.ingest.chunker. It embeds chunks with
+OpenAI and upserts them into Chroma; the next phase is querying via src.api.main.
+"""
+
 import os
 import uuid
 

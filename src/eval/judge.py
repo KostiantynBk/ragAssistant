@@ -1,3 +1,11 @@
+"""
+Faithfulness judging step after answer generation.
+
+Called by src.generation.generator and src.agent.loop. It asks an LLM whether the
+answer is supported by the retrieved sources; the grounded flag is returned to
+the API response and logger.
+"""
+
 import json
 import os
 

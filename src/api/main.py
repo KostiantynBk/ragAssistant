@@ -1,3 +1,10 @@
+"""
+FastAPI entry point for the query phase.
+
+Run with uvicorn after ingestion. /ask validates a request with src.api.schemas,
+then calls retrieval, optional reranking, answer generation, judging, and logging.
+"""
+
 import os
 
 from dotenv import load_dotenv

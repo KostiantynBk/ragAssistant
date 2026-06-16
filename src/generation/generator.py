@@ -1,3 +1,11 @@
+"""
+Answer generation step in the query phase.
+
+Called by src.api.main after retrieval/reranking. It builds the context prompt,
+calls the chat LLM, asks src.eval.judge to check groundedness, then logs through
+src.eval.logger before returning a RAGAnswer.
+"""
+
 import json
 import os
 import time

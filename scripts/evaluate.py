@@ -1,5 +1,8 @@
 """
-Run the retrieval eval harness over all 4 configs and print a comparison table.
+Evaluation entry point for quick console results.
+
+Run this after ingestion. It calls src.eval.harness over the Chroma collections
+and prints retrieval metrics for each chunking/reranker configuration.
 
 Usage:
     python scripts/evaluate.py [--qa-path eval_qa.json] [--db-path db/chroma]
